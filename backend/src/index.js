@@ -13,6 +13,7 @@ import expenseRoutes from './routes/expenseRoutes.js';
 import reportRoutes from './routes/reportRoutes.js';
 
 const app = express();
+app.set('trust proxy', 1); // Trust reverse proxy (e.g., Render, Heroku) for rate limiting
 
 // Middleware
 app.use(helmet());
