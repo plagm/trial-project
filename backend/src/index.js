@@ -43,6 +43,10 @@ app.use('/api/expenses', expenseRoutes);
 app.use('/api/reports', reportRoutes);
 
 // Basic Route
+app.get('/', (req, res) => {
+  res.send('Invoice Loop API is running!');
+});
+
 app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'API is running' });
 });
